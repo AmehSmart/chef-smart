@@ -214,6 +214,52 @@ ul.ingredients-list > li {
     display: none;
 }
 
+
+
+.preferences-form {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.preferences-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.8125rem;
+    color: #6B7280;
+    font-weight: 500;
+}
+
+.preferences-form select {
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    padding: 8px 12px;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    background: white;
+    color: #141413;
+    cursor: pointer;
+}
+
+.preferences-form select:focus {
+    outline: none;
+    border-color: #D17557;
+    box-shadow: 0 0 0 3px rgba(209, 117, 87, 0.15);
+}
+
+@media (max-width: 479px) {
+    .preferences-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .preferences-form select {
+        width: 100%;
+    }
+}
 /* =========================================
    Laptop / Desktop layout (1024px+)
    Sidebar + content, using the full screen
@@ -240,6 +286,39 @@ ul.ingredients-list > li {
     .suggested-recipe-container {
         padding: 40px 48px;
     }
+}
+
+ul.ingredients-list > li {
+    color: #374151;
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 6px 8px 6px 16px;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.delete-ingredient-btn {
+    border: none;
+    background: transparent;
+    color: #9CA3AF;
+    font-size: 1.125rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.delete-ingredient-btn:hover {
+    background-color: #FEE2E2;
+    color: #B91C1C;
 }
 
 /* Large Desktop / Wide Monitors (1440px+) */
