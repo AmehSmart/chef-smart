@@ -13,6 +13,11 @@ export default function Main() {
     const [mealType, setMealType] = React.useState("")
     const [measurementSystem, setMeasurementSystem] = React.useState("metric")
     const recipeSection = React.useRef(null)
+    React.useEffect(() => {
+        if (recipeSection.current && recipe !== "") {
+            recipeSection.current.scrollIntoView({ behavior: "smooth" })
+        }
+    }, [recipe])
 
     async function getRecipe() {
         setIsLoading(true)
