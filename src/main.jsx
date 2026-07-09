@@ -12,6 +12,7 @@ export default function Main() {
     const [error, setError] = React.useState("")
     const [mealType, setMealType] = React.useState("")
     const [measurementSystem, setMeasurementSystem] = React.useState("metric")
+    const recipeSection = React.useRef(null)
 
     async function getRecipe() {
         setIsLoading(true)
@@ -77,6 +78,7 @@ export default function Main() {
             <div className="app-layout">
                 {ingredients.length > 0 &&
                     <IngredientsList
+                        ref = {recipeSection}
                         ingredients={ingredients}
                         getRecipe={getRecipe}
                         isLoading={isLoading}
